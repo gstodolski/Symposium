@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <p>A share of {{ stonk['name'] }} ({{ stonk['symbol'] }}) costs {{ stonk['price'] }}.</p>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Shop
+{% endblock %}
+
+{% block main %}
+    <form action="/shop" method="post">
+        <div class="form-group">
+            <input name="text" placeholder="Prove your worth" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Add $1000</button>
+    </form>
+{% endblock %}
