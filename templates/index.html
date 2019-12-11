@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block main %}
+<!--<div class="alert alert-warning fade show" role="alert">
+    <h1>Welcome to Symposium</h1> <hr>
+    <h6>Search for your current and past Yale courses</h6>
+</div>-->
+
+<h3 style="color: #537fbe;">My courses</h3>
+<hr>
+
+<form action="/" method="post">
+    <table class="table table-borderless table-hover">
+        <thead class="tableheader">
+            <tr>
+                <th scope="col">Subject</th>
+                <th scope="col">Number</th>
+                <th scope="col">Name</th>
+                <th scope="col">Professor</th>
+                <th scope="col">Semester Taken</th>
+            </tr>
+        </thead>
+        <tbody class="tabletext">
+            {% for course in courses %}
+                    <tr>
+                        <td>{{ course["subject"] }}</td>
+                        <td>{{ course["number"] }}</td>
+                        <td><button type="submit" class="btn btn-link" name="button" value={{ course["course_id"] }}>{{ course["name"] }}</button></td>
+                        <td>{{ course["professor"] }}</td>
+                        <td>{{ course["semester"] }}</td>
+                    </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</form>
+
+{% endblock %}

@@ -1,0 +1,142 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block main %}
+
+<h3 style="color: #537fbe;">Search</h3>
+<form style="color: dimgray;" method="POST">
+    <select class="custom-select mr-sm-2" style="color: dimgray; width: 200px;" name="subject" placeholder="Subject">
+        <option selected>Select a subject</option>
+        <option value= "ACCT">ACCT</option>
+        <option value= "AFAM">AFAM</option>
+        <option value= "AFST">AFST</option>
+        <option value= "AKKD">AKKD</option>
+        <option value= "AMST">AMST</option>
+        <option value= "AMTH">AMTH</option>
+        <option value= "ANTH">ANTH</option>
+        <option value= "APHY">APHY</option>
+        <option value= "ARBC">ARBC</option>
+        <option value= "ARCG">ARCG</option>
+        <option value= "ARCH">ARCH</option>
+        <option value= "ARMN">ARMN</option>
+        <option value= "ART">ART</option>
+        <option value= "ASL">ASL</option>
+        <option value= "ASTR">ASTR</option>
+        <option value= "BENG">BENG</option>
+        <option value= "BIOL">BIOL</option>
+        <option value= "BNGL">BNGL</option>
+        <option value= "BRST">BRST</option>
+        <option value= "BURM">BURM</option>
+        <option value= "CENG">CENG</option>
+        <option value= "CGSC">CGSC</option>
+        <option value= "CHEM">CHEM</option>
+        <option value= "CHLD">CHLD</option>
+        <option value= "CHNS">CHNS</option>
+        <option value= "CLCV">CLCV</option>
+        <option value= "CLSS">CLSS</option>
+        <option value= "CPAR">CPAR</option>
+        <option value= "CPSC">CPSC</option>
+        <option value= "CSEC">CSEC</option>
+        <option value= "CZEC">CZEC</option>
+        <option value= "DEVN">DEVN</option>
+        <option value= "DRST">DRST</option>
+        <option value= "DUTC">DUTC</option>
+        <option value= "EALL">EALL</option>
+        <option value= "EAST">EAST</option>
+        <option value= "ECON">ECON</option>
+        <option value= "EDST">EDST</option>
+        <option value= "E%EB">E&EB</option>
+        <option value= "EENG">EENG</option>
+        <option value= "EGYP">EGYP</option>
+        <option value= "ENAS">ENAS</option>
+        <option value= "ENGL">ENGL</option>
+        <option value= "ENRG">ENRG</option>
+        <option value= "ENVE">ENVE</option>
+        <option value= "EP&E">EP&E</option>
+        <option value= "ER&M">ER&M</option>
+        <option value= "EVST">EVST</option>
+        <option value= "F&ES">F&ES</option>
+        <option value= "FILM">FILM</option>
+        <option value= "FNSH">FNSH</option>
+        <option value= "FREN">FREN</option>
+        <option value= "G&G">G&G</option>
+        <option value= "GLBL">GLBL</option>
+        <option value= "GMAN">GMAN</option>
+        <option value= "GREK">GREK</option>
+        <option value= "HEBR">HEBR</option>
+        <option value= "HGRN">HGRN</option>
+        <option value= "HIST">HIST</option>
+        <option value= "HLTH">HLTH</option>
+        <option value= "HMRT">HMRT</option>
+        <option value= "HNDI">HNDI</option>
+        <option value= "HSAR">HSAR</option>
+        <option value= "HSHM">HSHM</option>
+        <option value= "HUMS">HUMS</option>
+        <option value= "INDN">INDN</option>
+        <option value= "ITAL">ITAL</option>
+        <option value= "JAPN">JAPN</option>
+        <option value= "JDST">JDST</option>
+        <option value= "KHMR">KHMR</option>
+        <option value= "KREN">KREN</option>
+        <option value= "LAST">LAST</option>
+        <option value= "LATN">LATN</option>
+        <option value= "LING">LING</option>
+        <option value= "LITR">LITR</option>
+        <option value= "MATH">MATH</option>
+        <option value= "MB&B">MB&B</option>
+        <option value= "MCDB">MCDB</option>
+        <option value= "MENG">MENG</option>
+        <option value= "MGRK">MGRK</option>
+        <option value= "MMES">MMES</option>
+        <option value= "MTBT">MTBT</option>
+        <option value= "MUSI">MUSI</option>
+        <option value= "NAVY">NAVY</option>
+        <option value= "NELC">NELC</option>
+        <option value= "NSCI">NSCI</option>
+        <option value= "PERS">PERS</option>
+        <option value= "PHIL">PHIL</option>
+        <option value= "PHYS">PHYS</option>
+        <option value= "PLSC">PLSC</option>
+        <option value= "PLSH">PLSH</option>
+        <option value= "PNJB">PNJB</option>
+        <option value= "PORT">PORT</option>
+        <option value= "PSYC">PSYC</option>
+        <option value= "RLST">RLST</option>
+        <option value= "ROMN">ROMN</option>
+        <option value= "RSEE">RSEE</option>
+        <option value= "RUSS">RUSS</option>
+        <option value= "S&DS">S&DS</option>
+        <option value= "SAST">SAST</option>
+        <option value= "SBCR">SBCR</option>
+        <option value= "SCIE">SCIE</option>
+        <option value= "SKRT">SKRT</option>
+        <option value= "SLAV">SLAV</option>
+        <option value= "SNHL">SNHL</option>
+        <option value= "SOCY">SOCY</option>
+        <option value= "SPAN">SPAN</option>
+        <option value= "SPEC">SPEC</option>
+        <option value= "STCY">STCY</option>
+        <option value= "SWAH">SWAH</option>
+        <option value= "TAML">TAML</option>
+        <option value= "TBTN">TBTN</option>
+        <option value= "THST">THST</option>
+        <option value= "TKSH">TKSH</option>
+        <option value= "TWI">TWI</option>
+        <option value= "UKRN">UKRN</option>
+        <option value= "URBN">URBN</option>
+        <option value= "USAF">USAF</option>
+        <option value= "VIET">VIET</option>
+        <option value= "WGSS">WGSS</option>
+        <option value= "WLOF">WLOF</option>
+        <option value= "YORU">YORU</option>
+        <option value= "ZULU">ZULU</option>
+    </select>
+    <input autocomplete="off" autofocus class="form-control" name="number" placeholder="Number" type="int">
+    or <input autocomplete="off" autofocus class="form-control" name="name" placeholder="Course name" type="text">
+    <button class="btn btn-warning" type="submit">Search</button>
+</form>
+
+{% endblock %}

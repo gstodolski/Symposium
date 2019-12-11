@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search Results
+{% endblock %}
+
+{% block main %}
+<!--<div class="alert alert-warning fade show" role="alert">
+    <h1>Welcome to Symposium</h1> <hr>
+    <h6>Search for your current and past Yale courses</h6>
+</div>-->
+
+<h3 style="color: #537fbe;">Search Results</h3>
+<hr>
+<table class="table table-borderless table-hover">
+    <thead class="tableheader">
+        <tr>
+            <th scope="col">Subject</th>
+            <th scope="col">Number</th>
+            <th scope="col">Name</th>
+            <th scope="col">Professor</th>
+        </tr>
+    </thead>
+    <tbody class="tabletext">
+    {% for row in course %}
+        <tr>
+            <td>{{ row["subject"] }}</td>
+            <td>{{ row["number"] }}</td>
+            <td>{{ row["name"] }}</td>
+            <td>{{ row["professor"] }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,94 @@
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    font-family: 'Didact Gothic';
+}
+
+/* colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+
+nav .nav-item .nav-link
+{
+    font-family: 'Didact Gothic';
+}
+
+h3
+{
+    font-family: 'Didact Gothic';
+    color: #537fbe;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+.background
+{
+    background-color: #add8e6;
+}
+
+.tabletext
+{
+    color: dimgray;
+}
+
+.tableheader
+{
+    color: #537fbe;
+}
+
+.form
+{
+    font-family: 'Didact Gothic';
+    text-align: left;
+}
+
+.label
+{
+    font-family: 'Didact Gothic';
+    font-weight: bold;
+}
+
+.post_text
+{
+    font-family: 'Didact Gothic';
+    text-align: left;
+}
+
+.post_user
+{
+    font-family: 'Didact Gothic';
+    text-align: left;
+    color: dimgray;
+    font-style: italic;
+}

@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ subject }} {{ number }}
+{% endblock %}
+
+{% block main %}
+
+<h3 style="color: #537fbe; text-align: left">{{ subject }} {{ number }}: {{ name }}</h3>
+
+<body style="text-align: left;">
+    {% for post in posts %}
+        <div class="border border-dark rounded" style="text-align: left; background-color: white;">
+            <text class="post_text">{{ post['post'] }}</text>
+            <br><text class="post_user">Posted by @{{ post['username'] }} on {{ post['date'] }} at {{ post['time'] }}</text>
+        </div>
+        <p></p>
+    {% endfor %}
+
+    <form action="/course?course_id={{ course_id }}" method="post" class="form">
+        <div>
+            <label class="label" for="text">Your post</label>
+            <input name="text" id="text" type="text" class="form-control text-wrap" style="width: 1044px;" placeholder="Write here...">
+            <button class="btn btn-warning" type="submit" value={{ course_id }}>Submit</button>
+        </div>
+    </form>
+</body>
+
+{% endblock %}
